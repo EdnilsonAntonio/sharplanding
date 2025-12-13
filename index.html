@@ -15,15 +15,23 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Apply theme immediately to prevent flash
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 
 <body>
     <!-- Header Fixo -->
     <header class="header" id="header">
         <nav class="nav container">
-            <div class="nav__logo">
-                <img src="assets/brand/Colorido.png" alt="SharpLanding Logo" class="logo-img">
-            </div>
+            <a href="#" class="nav__logo">
+                <img src="assets/brand/Colorido.png" alt="SharpLanding Logo" class="logo-img logo-img--light">
+                <img src="assets/brand/Mono - Branco no preto.png" alt="SharpLanding Logo" class="logo-img logo-img--dark">
+            </a>
             <ul class="nav__menu" id="nav-menu">
                 <li class="nav__item">
                     <a href="#servicos" class="nav__link">Serviços</a>
@@ -45,6 +53,15 @@
                 </li>
             </ul>
             <a href="#contacto" class="btn btn--primary nav__cta">Pedir Landing Page</a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
             <div class="nav__toggle" id="nav-toggle">
                 <span></span>
                 <span></span>
@@ -415,10 +432,9 @@
                             <div class="why__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 11.08V12A10 10 0 1 1 5.93 18.93" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                                 </svg>
                             </div>
                             <div>
@@ -432,10 +448,9 @@
                             <div class="why__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 11.08V12A10 10 0 1 1 5.93 18.93" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                                 </svg>
                             </div>
                             <div>
@@ -448,10 +463,9 @@
                             <div class="why__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 11.08V12A10 10 0 1 1 5.93 18.93" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                                 </svg>
                             </div>
                             <div>
@@ -499,7 +513,9 @@
         <div class="container">
             <div class="footer__content">
                 <div class="footer__brand">
-                    <img src="assets/brand/Mono - Branco no preto.png" alt="SharpLanding Logo" class="footer__logo">
+                    <a href="#" class="footer__logo-link">
+                        <img src="assets/brand/Mono - Branco no preto.png" alt="SharpLanding Logo" class="footer__logo">
+                    </a>
                     <p class="footer__tagline">Landing Pages que Convertem. Criadas Rápido.</p>
                 </div>
                 <div class="footer__links">
@@ -528,6 +544,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
 
     <script src="script.js"></script>
 </body>

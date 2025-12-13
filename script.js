@@ -4,7 +4,27 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        
+        // If href is just "#", scroll to top
+        if (href === '#') {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            const navMenu = document.getElementById('nav-menu');
+            const navToggle = document.getElementById('nav-toggle');
+            if (navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
+            return;
+        }
+        
+        // Otherwise, scroll to target element
+        const target = document.querySelector(href);
         if (target) {
             const headerOffset = 85;
             const elementPosition = target.getBoundingClientRect().top;
@@ -18,7 +38,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             // Close mobile menu if open
             const navMenu = document.getElementById('nav-menu');
             const navToggle = document.getElementById('nav-toggle');
-            if (navMenu.classList.contains('active')) {
+            if (navMenu && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
             }
@@ -217,6 +237,66 @@ function highlightNavigation() {
 }
 
 window.addEventListener('scroll', highlightNavigation);
+
+// ============================================
+// THEME TOGGLE - Apply theme immediately to prevent flash
+// ============================================
+(function() {
+    const html = document.documentElement;
+    // Check for saved theme preference or default to dark mode
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', currentTheme);
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    // Ensure theme is set (in case it wasn't set above)
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', currentTheme);
+    
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    }
+});
+
+// ============================================
+// BACK TO TOP BUTTON
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    if (backToTopButton) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+            
+            // Show button when user scrolls past half of the page
+            if (scrollPosition > windowHeight / 2) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // Smooth scroll to top when button is clicked
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
 
 // ============================================
 // CONSOLE MESSAGE
