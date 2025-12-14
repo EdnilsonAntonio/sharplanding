@@ -9,12 +9,24 @@
     <meta name="keywords" content="landing pages, conversão, design premium, leads, marketing digital">
     <meta name="author" content="SharpLanding">
     <title>SharpLanding - Landing Pages que Convertem</title>
+    
+    <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- Stylesheets -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet"></noscript>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
     <script>
         // Apply theme immediately to prevent flash
         (function() {
@@ -29,8 +41,8 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
-                <img src="assets/brand/Colorido.png" alt="SharpLanding Logo" class="logo-img logo-img--light">
-                <img src="assets/brand/Mono - Branco no preto.png" alt="SharpLanding Logo" class="logo-img logo-img--dark">
+                <img src="assets/brand/Colorido.png" alt="SharpLanding Logo" class="logo-img logo-img--light" width="150" height="60" loading="eager" fetchpriority="high">
+                <img src="assets/brand/Mono - Branco no preto.png" alt="SharpLanding Logo" class="logo-img logo-img--dark" width="150" height="60" loading="eager">
             </a>
             <ul class="nav__menu" id="nav-menu">
                 <li class="nav__item">
@@ -514,7 +526,7 @@
             <div class="footer__content">
                 <div class="footer__brand">
                     <a href="#" class="footer__logo-link">
-                        <img src="assets/brand/Mono - Branco no preto.png" alt="SharpLanding Logo" class="footer__logo">
+                        <img src="assets/brand/Mono - Branco no preto.png" alt="SharpLanding Logo" class="footer__logo" width="150" height="60" loading="lazy">
                     </a>
                     <p class="footer__tagline">Landing Pages que Convertem. Criadas Rápido.</p>
                 </div>
