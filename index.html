@@ -5,31 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="SharpLanding - Landing Pages que Convertem. Criadas Rápido. Design premium, alta conversão e entrega rápida para empresas que querem mais leads.">
-    <meta name="keywords" content="landing pages, conversão, design premium, leads, marketing digital">
+        content="SharpLanding - Desenvolvimento Frontend de Excelência. Criamos landing pages, websites informativos, otimizamos performance e oferecemos suporte frontend contínuo.">
+    <meta name="keywords"
+        content="landing pages, websites, desenvolvimento frontend, otimização de performance, suporte frontend, web design">
     <meta name="author" content="SharpLanding">
-    <title>SharpLanding - Landing Pages que Convertem</title>
-    
+    <title>SharpLanding - Desenvolvimento Frontend de Excelência</title>
+
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    
+
     <!-- Stylesheets -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet"></noscript>
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet">
+    </noscript>
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <link rel="icon" type="image/png"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
     <script>
         // Apply theme immediately to prevent flash
-        (function() {
+        (function () {
             const theme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', theme);
         })();
@@ -41,8 +45,10 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
-                <img src="assets/brand/Colorido.png" alt="SharpLanding Logo" class="logo-img logo-img--light" width="150" height="60" loading="eager" fetchpriority="high">
-                <img src="assets/brand/Mono - Branco no preto.png" alt="SharpLanding Logo" class="logo-img logo-img--dark" width="150" height="60" loading="eager">
+                <img src="assets/brand/Colorido.png" alt="SharpLanding Logo" class="logo-img logo-img--light"
+                    width="150" height="60" loading="eager" fetchpriority="high">
+                <img src="assets/brand/Mono - Branco no preto.png" alt="SharpLanding Logo"
+                    class="logo-img logo-img--dark" width="150" height="60" loading="eager">
             </a>
             <ul class="nav__menu" id="nav-menu">
                 <li class="nav__item">
@@ -61,17 +67,22 @@
                     <a href="#contacto" class="nav__link">Contacto</a>
                 </li>
                 <li class="nav__item nav__item--cta">
-                    <a href="#contacto" class="btn btn--primary nav__cta-mobile">Pedir Landing Page</a>
+                    <a href="#contacto" class="btn btn--primary nav__cta-mobile">Solicitar Orçamento</a>
                 </li>
             </ul>
-            <a href="#contacto" class="btn btn--primary nav__cta">Pedir Landing Page</a>
+            <a href="#contacto" class="btn btn--primary nav__cta">Solicitar Orçamento</a>
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" />
+                    <path
+                        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                 </svg>
-                <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </button>
             <div class="nav__toggle" id="nav-toggle">
@@ -92,15 +103,15 @@
         <div class="container">
             <div class="hero__content">
                 <h1 class="hero__title">
-                    Landing Pages que <span class="highlight">Convertem</span>.<br>
-                    Criadas <span class="highlight">Rápido</span>.
+                    Desenvolvimento Frontend de <span class="highlight">Excelência</span>.<br>
+                    Soluções <span class="highlight">Completas</span>.
                 </h1>
                 <p class="hero__subtitle">
-                    Projetamos landing pages modernas, rápidas e orientadas a resultados para empresas que querem mais
-                    leads.
+                    Criamos landing pages, websites informativos, otimizamos performance e oferecemos suporte frontend
+                    contínuo para empresas que buscam resultados.
                 </p>
                 <div class="hero__cta">
-                    <a href="#contacto" class="btn btn--primary btn--large">Quero uma Landing Page</a>
+                    <a href="#contacto" class="btn btn--primary btn--large">Solicitar Orçamento</a>
                     <a href="#portfolio" class="btn btn--secondary btn--large">Ver Exemplos</a>
                 </div>
             </div>
@@ -122,9 +133,9 @@
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h3 class="value__title">Foco Total em Conversão</h3>
-                    <p class="value__description">Cada elemento é pensado estrategicamente para maximizar conversões e
-                        gerar mais leads qualificados.</p>
+                    <h3 class="value__title">Foco Total em Resultados</h3>
+                    <p class="value__description">Cada elemento é pensado estrategicamente para maximizar resultados,
+                        seja conversão, performance ou experiência do usuário.</p>
                 </div>
                 <div class="value__card" data-aos="fade-up" data-delay="100">
                     <div class="value__icon">
@@ -147,8 +158,8 @@
                         </svg>
                     </div>
                     <h3 class="value__title">Entrega Rápida</h3>
-                    <p class="value__description">Processo otimizado que entrega landing pages de alta qualidade em
-                        tempo recorde, sem comprometer a excelência.</p>
+                    <p class="value__description">Processo otimizado que entrega projetos de alta qualidade em tempo
+                        recorde, sem comprometer a excelência.</p>
                 </div>
                 <div class="value__card" data-aos="fade-up" data-delay="300">
                     <div class="value__icon">
@@ -159,8 +170,8 @@
                         </svg>
                     </div>
                     <h3 class="value__title">Suporte Contínuo</h3>
-                    <p class="value__description">Acompanhamento e otimização contínua para garantir que sua landing
-                        page continue a performar no máximo.</p>
+                    <p class="value__description">Acompanhamento e otimização contínua para garantir que seus projetos
+                        continuem a performar no máximo.</p>
                 </div>
             </div>
         </div>
@@ -171,12 +182,12 @@
         <div class="container">
             <div class="section__header">
                 <h2 class="section__title">Nossos Serviços</h2>
-                <p class="section__subtitle">Soluções completas para suas necessidades de conversão</p>
+                <p class="section__subtitle">Soluções completas de desenvolvimento frontend para seu negócio</p>
             </div>
             <div class="services__grid">
                 <div class="services__card" data-aos="fade-up" data-delay="0">
                     <div class="services__number">01</div>
-                    <h3 class="services__title">Landing Pages Sob Medida</h3>
+                    <h3 class="services__title">Criação de Landing Pages</h3>
                     <p class="services__description">
                         Landing pages completamente personalizadas, desenvolvidas do zero para o seu negócio. Design
                         único, código otimizado e estratégia de conversão integrada.
@@ -190,44 +201,44 @@
                 </div>
                 <div class="services__card" data-aos="fade-up" data-delay="100">
                     <div class="services__number">02</div>
-                    <h3 class="services__title">Landing Pages por Assinatura</h3>
+                    <h3 class="services__title">Criação de Websites Informativos</h3>
                     <p class="services__description">
-                        Modelo de assinatura mensal para empresas que precisam de múltiplas landing pages de forma
-                        recorrente. Ideal para campanhas e lançamentos frequentes.
+                        Websites institucionais e informativos desenvolvidos com foco em usabilidade, performance e
+                        design moderno. Ideal para empresas que precisam de presença online profissional.
                     </p>
                     <ul class="services__features">
-                        <li>Múltiplas landing pages</li>
-                        <li>Preço fixo mensal</li>
-                        <li>Prioridade na entrega</li>
-                        <li>Suporte dedicado</li>
+                        <li>Design profissional e moderno</li>
+                        <li>Navegação intuitiva</li>
+                        <li>SEO otimizado</li>
+                        <li>Totalmente responsivo</li>
                     </ul>
                 </div>
                 <div class="services__card" data-aos="fade-up" data-delay="200">
                     <div class="services__number">03</div>
-                    <h3 class="services__title">Otimização de Conversão</h3>
+                    <h3 class="services__title">Melhoria de Desempenho</h3>
                     <p class="services__description">
-                        Análise profunda e otimização de landing pages existentes. A/B testing, melhorias de UX e
-                        ajustes estratégicos para aumentar significativamente as conversões.
+                        Otimização completa de performance em websites existentes. Redução de tempo de carregamento,
+                        melhorias de Core Web Vitals e otimização de recursos para máxima velocidade.
                     </p>
                     <ul class="services__features">
-                        <li>Auditoria completa</li>
-                        <li>A/B testing</li>
-                        <li>Melhorias de UX/UI</li>
-                        <li>Relatórios de performance</li>
+                        <li>Auditoria de performance</li>
+                        <li>Otimização de imagens e recursos</li>
+                        <li>Melhoria de Core Web Vitals</li>
+                        <li>Relatórios detalhados</li>
                     </ul>
                 </div>
                 <div class="services__card" data-aos="fade-up" data-delay="300">
                     <div class="services__number">04</div>
-                    <h3 class="services__title">Suporte Frontend Contínuo</h3>
+                    <h3 class="services__title">Suporte Frontend</h3>
                     <p class="services__description">
-                        Manutenção, atualizações e melhorias contínuas das suas landing pages. Garantimos que tudo
-                        funcione perfeitamente e evolua com seu negócio.
+                        Suporte frontend como serviço (Support as a Service). Manutenção contínua, atualizações,
+                        correções e melhorias para garantir que seu site funcione perfeitamente sempre.
                     </p>
                     <ul class="services__features">
-                        <li>Manutenção técnica</li>
-                        <li>Atualizações regulares</li>
+                        <li>Manutenção técnica contínua</li>
+                        <li>Atualizações e melhorias</li>
                         <li>Correções rápidas</li>
-                        <li>Evolução contínua</li>
+                        <li>Suporte dedicado</li>
                     </ul>
                 </div>
             </div>
@@ -258,8 +269,8 @@
                     <div class="process__content">
                         <h3 class="process__title">Design + Desenvolvimento</h3>
                         <p class="process__description">
-                            Criamos o design personalizado e desenvolvemos a landing page com código otimizado, focando
-                            em performance e conversão desde o início.
+                            Criamos o design personalizado e desenvolvemos o projeto com código otimizado, focando em
+                            performance e resultados desde o início.
                         </p>
                     </div>
                 </div>
@@ -280,8 +291,8 @@
                     <div class="process__content">
                         <h3 class="process__title">Entrega + Suporte</h3>
                         <p class="process__description">
-                            Entrega final com código limpo, documentação e suporte contínuo. Sua landing page pronta
-                            para converter e evoluir.
+                            Entrega final com código limpo, documentação e suporte contínuo. Seu projeto pronto para
+                            performar e evoluir.
                         </p>
                     </div>
                 </div>
@@ -294,7 +305,7 @@
         <div class="container">
             <div class="section__header">
                 <h2 class="section__title">Portfólio</h2>
-                <p class="section__subtitle">Exemplos de landing pages que geram resultados</p>
+                <p class="section__subtitle">Exemplos de projetos que geram resultados</p>
             </div>
             <div class="portfolio__grid">
                 <div class="portfolio__item" data-aos="fade-up" data-delay="0">
@@ -444,15 +455,15 @@
                             <div class="why__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" />
                                     <polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2.5"
-                                        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                        stroke-linecap="round" stroke-linejoin="round" fill="none" />
                                 </svg>
                             </div>
                             <div>
                                 <h3 class="why__point-title">Não Somos Templates Genéricos</h3>
-                                <p class="why__point-text">Cada landing page é desenvolvida do zero, pensada
-                                    especificamente para o seu negócio e objetivos. Zero cópias, 100% personalização.
+                                <p class="why__point-text">Cada projeto é desenvolvido do zero, pensado especificamente
+                                    para o seu negócio e objetivos. Zero cópias, 100% personalização.
                                 </p>
                             </div>
                         </div>
@@ -460,9 +471,9 @@
                             <div class="why__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" />
                                     <polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2.5"
-                                        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                        stroke-linecap="round" stroke-linejoin="round" fill="none" />
                                 </svg>
                             </div>
                             <div>
@@ -475,9 +486,9 @@
                             <div class="why__icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" />
                                     <polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2.5"
-                                        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                        stroke-linecap="round" stroke-linejoin="round" fill="none" />
                                 </svg>
                             </div>
                             <div>
@@ -512,10 +523,10 @@
     <section class="cta" id="contacto">
         <div class="container">
             <div class="cta__content">
-                <h2 class="cta__title">Pronto para ter uma landing page que realmente converte?</h2>
+                <h2 class="cta__title">Pronto para elevar seu projeto frontend ao próximo nível?</h2>
                 <p class="cta__subtitle">Vamos criar algo extraordinário juntos. Entre em contacto e descubra como
-                    podemos transformar seus visitantes em clientes.</p>
-                <a href="#contacto" class="btn btn--primary btn--large btn--glow">Solicitar Landing Page</a>
+                    podemos transformar suas ideias em realidade digital.</p>
+                <a href="#contacto" class="btn btn--primary btn--large btn--glow">Solicitar Orçamento</a>
             </div>
         </div>
     </section>
@@ -526,17 +537,18 @@
             <div class="footer__content">
                 <div class="footer__brand">
                     <a href="#" class="footer__logo-link">
-                        <img src="assets/brand/Mono - Branco no preto.png" alt="SharpLanding Logo" class="footer__logo" width="150" height="60" loading="lazy">
+                        <img src="assets/brand/Mono - Branco no preto.png" alt="SharpLanding Logo" class="footer__logo"
+                            width="150" height="60" loading="lazy">
                     </a>
-                    <p class="footer__tagline">Landing Pages que Convertem. Criadas Rápido.</p>
+                    <p class="footer__tagline">Desenvolvimento Frontend de Excelência. Soluções Completas.</p>
                 </div>
                 <div class="footer__links">
                     <div class="footer__column">
                         <h4 class="footer__title">Serviços</h4>
                         <ul class="footer__list">
-                            <li><a href="#servicos" class="footer__link">Landing Pages Sob Medida</a></li>
-                            <li><a href="#servicos" class="footer__link">Landing Pages por Assinatura</a></li>
-                            <li><a href="#servicos" class="footer__link">Otimização de Conversão</a></li>
+                            <li><a href="#servicos" class="footer__link">Criação de Landing Pages</a></li>
+                            <li><a href="#servicos" class="footer__link">Websites Informativos</a></li>
+                            <li><a href="#servicos" class="footer__link">Melhoria de Desempenho</a></li>
                             <li><a href="#servicos" class="footer__link">Suporte Frontend</a></li>
                         </ul>
                     </div>
@@ -560,7 +572,8 @@
     <!-- Back to Top Button -->
     <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
         </svg>
     </button>
 
